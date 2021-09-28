@@ -14,6 +14,7 @@ line_bot_api = LineBotApi(os.environ.get("CHANNEL_ACCESS_TOKEN"))
 handler = WebhookHandler(os.environ.get("CHANNEL_SECRET"))
 
 
+# 接收 LINE 的資訊
 @app.route("/", methods=["GET", "POST"])
 def callback():
 
@@ -36,5 +37,5 @@ def handle_message(event):
     get_message = event.message.text
 
     # Send To Line
-    reply = TextSendMessage(text=f"{get_message}")
+    reply = TextSendMessage(text=f"{get_message}****")
     line_bot_api.reply_message(event.reply_token, reply)
