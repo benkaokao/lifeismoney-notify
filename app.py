@@ -39,3 +39,17 @@ def handle_message(event):
     # 回傳message
     reply = TextSendMessage(text=f"{get_message}♫♪♬")
     line_bot_api.reply_message(event.reply_token, reply)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
